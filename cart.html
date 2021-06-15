@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" class="sr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="google-site-verification" content="zx7Z9AESAR-otpyL0bASxOIgpyfoSpoHwewU0nultFw">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Your Shopping Cart</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.shopifycdn.net/s/files/1/0049/5582/t/177/assets/213a.scss.css?v=1130068211696368465">
+    <link rel="canonical" href="https://www.minimioche.com/cart">
+    <link rel="shortcut icon" href="https://cdn.shopifycdn.net/s/files/1/0049/5582/t/175/assets/icon-favicon.png?v=9857541501312614760" type="image/png">
+
+    <link rel="icon" type="image/png" href="https://cdn.shopifycdn.net/s/files/1/0049/5582/t/175/assets/icon-favicon-16.png?v=3765384190402589137" sizes="16x16">  
+    <link rel="icon" type="image/png" href="https://cdn.shopifycdn.net/s/files/1/0049/5582/t/175/assets/icon-favicon-32.png?v=7622276507441164152" sizes="32x32">  
+    <link rel="icon" type="image/png" href="https://cdn.shopifycdn.net/s/files/1/0049/5582/t/175/assets/icon-favicon-96.png?v=2265020734976034858" sizes="96x96">  
+
+    <link rel="stylesheet" href="https://edge.personalizer.io/storefront/2.0.0/css/recommendation.min.css?v=101">
+    <link href="https://cdn.shopifycdn.net/s/files/1/0049/5582/t/175/assets/css-style.css?v=130665685701177043" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.0.2/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.0.2/js/swiper.min.js"></script>
+
+    <style>
+      body {
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      .shopify-section {
+        background-color: #f4efef;
+        text-align: center;
+        font-size: 12px;
+        margin-bottom: 30px;
+        padding: 16px;
+      }
+
+      .ls-box-title {
+        font-family: "Lato", "Helvetica Neue", sans-serif;
+        font-size: 34px;
+        font-weight: 600;
+        color: #000000;
+        margin-bottom: 20px;
+        text-align: center;
+      } 
+    </style>
+  </head>
+  <body>
+    <div id="shopify-section-promo-banner" class="shopify-section">
+      <div class="promo-banner" style="--background: #f4efef">
+        Enjoy free shipping on all orders over $100 in the USA and Canada
+      </div>
+    </div>
+    <main class="main " role="main">
+      <div class="wrapper">
+        <article class="page cart-page">
+          <header class="cart-page-header content">
+            <h1>
+              order summary
+            </h1>
+            <p>
+              <a class="back-link js-back-button" href="index.html">
+                ← Back to Shopping
+              </a>
+            </p>
+          </header>
+          <div class="cart-content">
+            <ul class="cart-items">
+              <div id="cartBox"></div>
+            </ul>
+            <ul class="cart-summary js-cart-summary">
+              <li class="summary-item subtotal-item">
+                <span class="item-label">
+                  Subtotal
+                </span>
+                <span class="item-value">
+                  <span class="cart-subtotal-value js-cart-subtotal"></span>
+                </span>
+              </li>
+              <li class="summary-item shipping-item">
+                <span class="item-label">
+                </span>
+                <span class="item-value js-cart-shipping" data-free-shipping-cad="100"
+                data-free-shipping-usd="150" data-message-below=" until free shipping"
+                data-message-above="eligible for free shipping">
+                </span>
+              </li>
+            </ul>
+            <div class="gift-wrapping js-gift-wrapping">
+              <div class="checkbox-wrapper">
+                <input class="add-gift-wrapping" type="checkbox" value="gift-wrapping">
+                <span class="label">
+                  Add gift wrapping and a note?
+                  <span class="option-price">
+                    (+$4)
+                  </span>
+                </span>
+              </div>
+              <div class="note-wrapper is-hidden">
+                <label for="gift-card-note">
+                  include a handwritten note?
+                </label>
+                <textarea class="gift-card-note" name="gift-card-note" rows="4" maxlength="500"
+                placeholder="Gift notes are limited to 500 characters and include spacing">
+                </textarea>
+                <span class="gift-card-note-characters-label">
+                  <span class="js-gift-card-note-characters">
+                    0
+                  </span>
+                  /500
+                </span>
+              </div>
+            </div>
+            <div class="cart-actions">
+              <div class="button is-big is-solid is-grey waves-effect" style="cursor: pointer;">
+                Checkout
+              </div>
+            </div>
+            <ul class="cart-messages">
+              <li class="cart-message">
+                <p>
+                  <span class="asterisk">
+                    *
+                  </span>
+                  all orders are processed in CAD
+                </p>
+                <p>
+                  <span class="asterisk">
+                    *
+                  </span>
+                  prices and shipping costs are not confirmed until you've reached checkout
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="empty-cart-content is-hidden">
+            <p>
+              Your bag is empty.
+            </p>
+          </div>
+        </article>
+        <script type="text/javascript">
+          document.sezzleConfig = {
+            targetXPath: '.price',
+            widgetType: 'product-page',
+            renderToPath: '..',
+            theme: 'light',
+            alignment: 'auto',
+            fontFamily: 'inherit',
+            color: 'inherit',
+            fontSize: 12,
+            fontWeight: 300,
+            logoSize: 1.00,
+            maxWidth: 400,
+            marginTop: 0,
+            marginLeft: 0,
+            marginRight: 0
+          }
+        </script>
+        <script src="https://widget.sezzle.com/v1/javascript/price-widget/initial?uuid=fd78731b-75b4-4591-b986-81b63318c207">
+        </script>
+        <limespot>
+          <limespot-container data-dynamic="true" class="product-content" data-owner="LimeSpot">
+            <limespot-box data-owner="LimeSpot" data-box-type="BoughtTogether" data-dynamic="true" data-host-page="Cart" data-placement-order="1" data-placement-sibling="" data-placement-disposition="0" data-placement-method="" class="ls-recommendation-box limespot-recommendation-box ls-animate no-zoom" data-reference-id="5867887111,9073351495,10043484999,2499286663252" data-box-style="carousel" style="display: block;">
+              <h3 class="ls-box-title">frequently bought together</h3>
+              <div class="limespot-recommendation-box-carousel-container">
+                <div class="ls-ul-container limespot-recommendation-box-carousel ls-drag-scroll v-align swiper-container">
+                  <ul class="ls-ul limespot-recommendation-box-carousel-shelf swiper-wrapper">
+                    <li class="limespot-recommendation-box-item swiper-slide" style="margin-right: 30px; max-width: 330px; flex-basis: 330px; min-width: 330px;">
+                      <a class="ls-link" data-product-identifier="9921482055" href="./detail.html?id=1&price=28">
+                        <div class="ls-image-wrap" style="flex: 1 1 330px;"><img class="ls-image" style="max-width: 330px; max-height: 330px; border-radius: 0.1px;" alt="Jogger Pants" title="Jogger Pants" data-img-raw-src="https://cdn.shopify.com/s/files/1/0049/5582/products/fleece-crew-raglan-mustard_330x330.jpg?v=1619034464" src="https://cdn.shopify.com/s/files/1/0049/5582/products/fleece-crew-raglan-mustard_330x330.jpg?v=1619034464" srcset="https://cdn.shopify.com/s/files/1/0049/5582/products/fleece-crew-raglan-mustard_180x.jpg?v=1619034464 180w,https://cdn.shopify.com/s/files/1/0049/5582/products/fleece-crew-raglan-mustard_360x.jpg?v=1619034464 360w,https://cdn.shopify.com/s/files/1/0049/5582/products/fleece-crew-raglan-mustard_470x.jpg?v=1619034464 470w,https://cdn.shopify.com/s/files/1/0049/5582/products/fleece-crew-raglan-mustard_600x.jpg?v=1619034464 600w,https://cdn.shopify.com/s/files/1/0049/5582/products/fleece-crew-raglan-mustard_750x.jpg?v=1619034464 750w,https://cdn.shopify.com/s/files/1/0049/5582/products/fleece-crew-raglan-mustard_940x.jpg?v=1619034464 940w,https://cdn.shopify.com/s/files/1/0049/5582/products/fleece-crew-raglan-mustard_1080x.jpg?v=1619034464 1080w,https://cdn.shopify.com/s/files/1/0049/5582/products/fleece-crew-raglan-mustard_1296x.jpg?v=1619034464 1296w,https://cdn.shopify.com/s/files/1/0049/5582/products/fleece-crew-raglan-mustard_1512x.jpg?v=1619034464 1512w,https://cdn.shopify.com/s/files/1/0049/5582/products/fleece-crew-raglan-mustard_1728x.jpg?v=1619034464 1728w,https://cdn.shopify.com/s/files/1/0049/5582/products/fleece-crew-raglan-mustard_2048x.jpg?v=1619034464 2048w" sizes="330px"><img src="https://cdn.shopifycdn.net/s/files/1/0049/5582/products/jogger2_54b62e0d-7214-4e90-b6d7-0151cabbabaf.jpg?v=1619034464" srcset="" sizes="330px" class="ls-image ls-image-secondary" style="max-width: 330px; max-height: 330px; border-radius: 0.1px;"></div>
+                        <div class="ls-info-wrap">
+                          <div class="ls-title">Jogger Pants</div>
+                          <div class="ls-vendor">mini mioche</div>
+                          <div class="ls-price-wrap">
+                            <span class="ls-original-price money" style="display: none;" data-numeric-value="41" data-money-convertible="" data-currency-usd="$41.00">₹410.00</span>
+                            <span class="ls-price money" data-numeric-value="37" data-money-convertible="" data-currency-usd="$37.00">₹370.00</span>
+                          </div>
+                        </div>
+                        <div class="ls-sale-sign-wrap" style="display: none;"></div>
+                      </a>
+                    </li><li class="limespot-recommendation-box-item swiper-slide" style="margin-right: 30px; max-width: 330px; flex-basis: 330px; min-width: 330px;">
+                      <a class="ls-link" data-product-identifier="5308582151" href="detail.html?id=2&price=48">
+                        <div class="ls-image-wrap" style="flex: 1 1 330px;"><img class="ls-image" style="max-width: 330px; max-height: 330px; border-radius: 0.1px;" alt="Long Sleeve Onesie" title="Long Sleeve Onesie" data-img-raw-src="https://cdn.shopify.com/s/files/1/0049/5582/products/lsonesie_330x330.jpg?v=1616596007" src="https://cdn.shopify.com/s/files/1/0049/5582/products/lsonesie_330x330.jpg?v=1616596007" srcset="https://cdn.shopify.com/s/files/1/0049/5582/products/lsonesie_180x.jpg?v=1616596007 180w,https://cdn.shopify.com/s/files/1/0049/5582/products/lsonesie_360x.jpg?v=1616596007 360w,https://cdn.shopify.com/s/files/1/0049/5582/products/lsonesie_470x.jpg?v=1616596007 470w,https://cdn.shopify.com/s/files/1/0049/5582/products/lsonesie_600x.jpg?v=1616596007 600w,https://cdn.shopify.com/s/files/1/0049/5582/products/lsonesie_750x.jpg?v=1616596007 750w,https://cdn.shopify.com/s/files/1/0049/5582/products/lsonesie_940x.jpg?v=1616596007 940w,https://cdn.shopify.com/s/files/1/0049/5582/products/lsonesie_1080x.jpg?v=1616596007 1080w,https://cdn.shopify.com/s/files/1/0049/5582/products/lsonesie_1296x.jpg?v=1616596007 1296w,https://cdn.shopify.com/s/files/1/0049/5582/products/lsonesie_1512x.jpg?v=1616596007 1512w,https://cdn.shopify.com/s/files/1/0049/5582/products/lsonesie_1728x.jpg?v=1616596007 1728w,https://cdn.shopify.com/s/files/1/0049/5582/products/lsonesie_2048x.jpg?v=1616596007 2048w" sizes="330px"><img src="https://cdn.shopifycdn.net/s/files/1/0049/5582/products/lila2.jpg?v=1616596004" srcset="" sizes="330px" class="ls-image ls-image-secondary" style="max-width: 330px; max-height: 330px; border-radius: 0.1px;"></div>
+                        <div class="ls-info-wrap">
+                          <div class="ls-title">Long Sleeve Onesie</div>
+                          <div class="ls-vendor">mini mioche</div>
+                          <div class="ls-price-wrap">
+                            <span class="ls-original-price money" style="display: none;" data-numeric-value="25" data-money-convertible="" data-currency-usd="$25.00">₹250.00</span>
+                            <span class="ls-price money" data-numeric-value="25" data-money-convertible="" data-currency-usd="$25.00">₹250.00</span>
+                          </div>
+                        </div>
+                        <div class="ls-sale-sign-wrap" style="display: none;"></div>
+                      </a>
+                    </li><li class="limespot-recommendation-box-item swiper-slide" style="margin-right: 30px; max-width: 330px; flex-basis: 330px; min-width: 330px;">
+                      <a class="ls-link" data-product-identifier="193487634439" href="detail.html?id=3&price=50">
+                        <div class="ls-image-wrap" style="flex: 1 1 330px;"><img class="ls-image" style="max-width: 330px; max-height: 330px; border-radius: 0.1px;" alt="Jersey Lush Hoody" title="Jersey Lush Hoody" data-img-raw-src="https://cdn.shopify.com/s/files/1/0049/5582/products/hoody_97cefc16-fc75-49cc-bd55-768d7be30750_330x330.jpg?v=1618254767" src="https://cdn.shopify.com/s/files/1/0049/5582/products/hoody_97cefc16-fc75-49cc-bd55-768d7be30750_330x330.jpg?v=1618254767" srcset="https://cdn.shopify.com/s/files/1/0049/5582/products/hoody_97cefc16-fc75-49cc-bd55-768d7be30750_180x.jpg?v=1618254767 180w,https://cdn.shopify.com/s/files/1/0049/5582/products/hoody_97cefc16-fc75-49cc-bd55-768d7be30750_360x.jpg?v=1618254767 360w,https://cdn.shopify.com/s/files/1/0049/5582/products/hoody_97cefc16-fc75-49cc-bd55-768d7be30750_470x.jpg?v=1618254767 470w,https://cdn.shopify.com/s/files/1/0049/5582/products/hoody_97cefc16-fc75-49cc-bd55-768d7be30750_600x.jpg?v=1618254767 600w,https://cdn.shopify.com/s/files/1/0049/5582/products/hoody_97cefc16-fc75-49cc-bd55-768d7be30750_750x.jpg?v=1618254767 750w,https://cdn.shopify.com/s/files/1/0049/5582/products/hoody_97cefc16-fc75-49cc-bd55-768d7be30750_940x.jpg?v=1618254767 940w,https://cdn.shopify.com/s/files/1/0049/5582/products/hoody_97cefc16-fc75-49cc-bd55-768d7be30750_1080x.jpg?v=1618254767 1080w,https://cdn.shopify.com/s/files/1/0049/5582/products/hoody_97cefc16-fc75-49cc-bd55-768d7be30750_1296x.jpg?v=1618254767 1296w,https://cdn.shopify.com/s/files/1/0049/5582/products/hoody_97cefc16-fc75-49cc-bd55-768d7be30750_1512x.jpg?v=1618254767 1512w,https://cdn.shopify.com/s/files/1/0049/5582/products/hoody_97cefc16-fc75-49cc-bd55-768d7be30750_1728x.jpg?v=1618254767 1728w,https://cdn.shopify.com/s/files/1/0049/5582/products/hoody_97cefc16-fc75-49cc-bd55-768d7be30750_2048x.jpg?v=1618254767 2048w" sizes="330px"><img src="https://cdn.shopifycdn.net/s/files/1/0049/5582/products/jersey-lush-hoody.jpg?v=1618254767" srcset="" sizes="330px" class="ls-image ls-image-secondary" style="max-width: 330px; max-height: 330px; border-radius: 0.1px;"></div>
+                        <div class="ls-info-wrap">
+                          <div class="ls-title">Jersey Lush Hoody</div>
+                          <div class="ls-vendor">mini mioche</div>
+                          <div class="ls-price-wrap">
+                            <span class="ls-original-price money" style="display: none;" data-numeric-value="42" data-money-convertible="" data-currency-usd="$42.00">₹420.00</span>
+                            <span class="ls-price money" data-numeric-value="38" data-money-convertible="" data-currency-usd="$38.00">₹380.00</span>
+                          </div>
+                        </div>
+                        <div class="ls-sale-sign-wrap" style="display: none;"></div>
+                      </a>
+                    </li><li class="limespot-recommendation-box-item swiper-slide" style="margin-right: 30px; max-width: 330px; flex-basis: 330px; min-width: 330px;">
+                      <a class="ls-link" data-product-identifier="5308646791" href="detail.html?id=4&price=128">
+                        <div class="ls-image-wrap" style="flex: 1 1 330px;"><img class="ls-image" style="max-width: 330px; max-height: 330px; border-radius: 0.1px;" alt="Short Sleeve Onesie" title="Short Sleeve Onesie" data-img-raw-src="https://cdn.shopify.com/s/files/1/0049/5582/products/lila7_330x330.jpg?v=1602874733" src="https://cdn.shopify.com/s/files/1/0049/5582/products/lila7_330x330.jpg?v=1602874733" srcset="https://cdn.shopify.com/s/files/1/0049/5582/products/lila7_180x.jpg?v=1602874733 180w,https://cdn.shopify.com/s/files/1/0049/5582/products/lila7_360x.jpg?v=1602874733 360w,https://cdn.shopify.com/s/files/1/0049/5582/products/lila7_470x.jpg?v=1602874733 470w,https://cdn.shopify.com/s/files/1/0049/5582/products/lila7_600x.jpg?v=1602874733 600w,https://cdn.shopify.com/s/files/1/0049/5582/products/lila7_750x.jpg?v=1602874733 750w,https://cdn.shopify.com/s/files/1/0049/5582/products/lila7_940x.jpg?v=1602874733 940w,https://cdn.shopify.com/s/files/1/0049/5582/products/lila7_1080x.jpg?v=1602874733 1080w,https://cdn.shopify.com/s/files/1/0049/5582/products/lila7_1296x.jpg?v=1602874733 1296w,https://cdn.shopify.com/s/files/1/0049/5582/products/lila7_1512x.jpg?v=1602874733 1512w,https://cdn.shopify.com/s/files/1/0049/5582/products/lila7_1728x.jpg?v=1602874733 1728w,https://cdn.shopify.com/s/files/1/0049/5582/products/lila7_2048x.jpg?v=1602874733 2048w" sizes="330px"><img src="https://cdn.shopifycdn.net/s/files/1/0049/5582/products/evelyn_white_onesie_1024x1024_9cf7eddd-1b53-45b2-a7b4-157f9287b792.jpg?v=1602874733" srcset="" sizes="330px" class="ls-image ls-image-secondary" style="max-width: 330px; max-height: 330px; border-radius: 0.1px;"></div>
+                        <div class="ls-info-wrap">
+                          <div class="ls-title">Short Sleeve Onesie</div>
+                          <div class="ls-vendor">mini mioche</div>
+                          <div class="ls-price-wrap">
+                            <span class="ls-original-price money" style="display: none;" data-numeric-value="23" data-money-convertible="" data-currency-usd="$23.00">₹230.00</span>
+                            <span class="ls-price money" data-numeric-value="23" data-money-convertible="" data-currency-usd="$23.00">₹230.00</span>
+                          </div>
+                        </div>
+                        <div class="ls-sale-sign-wrap" style="display: none;"></div>
+                      </a>
+                    </li><li class="limespot-recommendation-box-item swiper-slide" style="margin-right: 30px; max-width: 330px; flex-basis: 330px; min-width: 330px;">
+                      <a class="ls-link" data-product-identifier="10043665735" href="https://www.minimioche.com/products/fleece-lush-hoody?lssrc=boughttogether&amp;lshst=cart">
+                        <div class="ls-image-wrap" style="flex: 1 1 330px;"><img class="ls-image" style="max-width: 330px; max-height: 330px; border-radius: 0.1px;" alt="Fleece Lush Hoody" title="Fleece Lush Hoody" data-img-raw-src="https://cdn.shopify.com/s/files/1/0049/5582/products/lush-hoody-1_330x330.jpg?v=1615947857" data-img-src="" data-img-srcset="" data-img-sizes="" src="https://cdn.shopify.com/s/files/1/0049/5582/products/lush-hoody-1_330x330.jpg?v=1615947857" srcset="https://cdn.shopify.com/s/files/1/0049/5582/products/lush-hoody-1_180x.jpg?v=1615947857 180w,https://cdn.shopify.com/s/files/1/0049/5582/products/lush-hoody-1_360x.jpg?v=1615947857 360w,https://cdn.shopify.com/s/files/1/0049/5582/products/lush-hoody-1_470x.jpg?v=1615947857 470w,https://cdn.shopify.com/s/files/1/0049/5582/products/lush-hoody-1_600x.jpg?v=1615947857 600w,https://cdn.shopify.com/s/files/1/0049/5582/products/lush-hoody-1_750x.jpg?v=1615947857 750w,https://cdn.shopify.com/s/files/1/0049/5582/products/lush-hoody-1_940x.jpg?v=1615947857 940w,https://cdn.shopify.com/s/files/1/0049/5582/products/lush-hoody-1_1080x.jpg?v=1615947857 1080w,https://cdn.shopify.com/s/files/1/0049/5582/products/lush-hoody-1_1296x.jpg?v=1615947857 1296w,https://cdn.shopify.com/s/files/1/0049/5582/products/lush-hoody-1_1512x.jpg?v=1615947857 1512w,https://cdn.shopify.com/s/files/1/0049/5582/products/lush-hoody-1_1728x.jpg?v=1615947857 1728w,https://cdn.shopify.com/s/files/1/0049/5582/products/lush-hoody-1_2048x.jpg?v=1615947857 2048w" sizes="330px"><img src="https://cdn.shopifycdn.net/s/files/1/0049/5582/products/lush-hoody-4.jpg?v=1615947843" srcset="" sizes="330px" class="ls-image ls-image-secondary" style="max-width: 330px; max-height: 330px; border-radius: 0.1px;"></div>
+                        <div class="ls-info-wrap">
+                          <div class="ls-title">Fleece Lush Hoody</div>
+                          <div class="ls-vendor">mini mioche</div>
+                          <div class="ls-price-wrap">
+                            <span class="ls-original-price money" style="display: none;" data-numeric-value="44" data-money-convertible="" data-currency-usd="$44.00">₹440.00</span>
+                            <span class="ls-price money" data-numeric-value="41" data-money-convertible="" data-currency-usd="$41.00">₹410.00</span>
+                          </div>
+                        </div>
+                        <div class="ls-sale-sign-wrap" style="display: none;"></div>
+                      </a>
+                    </li><li class="limespot-recommendation-box-item swiper-slide" style="margin-right: 30px; max-width: 330px; flex-basis: 330px; min-width: 330px;">
+                      <a class="ls-link" data-product-identifier="10183708039" href="detail.html?id=5&price=118">
+                        <div class="ls-image-wrap" style="flex: 1 1 330px;"><img class="ls-image" style="max-width: 330px; max-height: 330px; border-radius: 0.1px;" alt="Crop Harem" title="Crop Harem" data-img-raw-src="https://cdn.shopify.com/s/files/1/0049/5582/products/harems2-_1_330x330.jpg?v=1618247208" data-img-src="" data-img-srcset="" data-img-sizes="" src="https://cdn.shopify.com/s/files/1/0049/5582/products/harems2-_1_330x330.jpg?v=1618247208" srcset="https://cdn.shopify.com/s/files/1/0049/5582/products/harems2-_1_180x.jpg?v=1618247208 180w,https://cdn.shopify.com/s/files/1/0049/5582/products/harems2-_1_360x.jpg?v=1618247208 360w,https://cdn.shopify.com/s/files/1/0049/5582/products/harems2-_1_470x.jpg?v=1618247208 470w,https://cdn.shopify.com/s/files/1/0049/5582/products/harems2-_1_600x.jpg?v=1618247208 600w,https://cdn.shopify.com/s/files/1/0049/5582/products/harems2-_1_750x.jpg?v=1618247208 750w,https://cdn.shopify.com/s/files/1/0049/5582/products/harems2-_1_940x.jpg?v=1618247208 940w,https://cdn.shopify.com/s/files/1/0049/5582/products/harems2-_1_1080x.jpg?v=1618247208 1080w,https://cdn.shopify.com/s/files/1/0049/5582/products/harems2-_1_1296x.jpg?v=1618247208 1296w,https://cdn.shopify.com/s/files/1/0049/5582/products/harems2-_1_1512x.jpg?v=1618247208 1512w,https://cdn.shopify.com/s/files/1/0049/5582/products/harems2-_1_1728x.jpg?v=1618247208 1728w,https://cdn.shopify.com/s/files/1/0049/5582/products/harems2-_1_2048x.jpg?v=1618247208 2048w" sizes="330px"><img src="https://cdn.shopifycdn.net/s/files/1/0049/5582/products/crop-harem-1.jpg?v=1618247208" srcset="" sizes="330px" class="ls-image ls-image-secondary" style="max-width: 330px; max-height: 330px; border-radius: 0.1px;"></div>
+                        <div class="ls-info-wrap">
+                          <div class="ls-title">Crop Harem</div>
+                          <div class="ls-vendor">mini mioche</div>
+                          <div class="ls-price-wrap">
+                            <span class="ls-original-price money" style="display: none;" data-numeric-value="31" data-money-convertible="" data-currency-usd="$31.00">₹310.00</span>
+                            <span class="ls-price money" data-numeric-value="29" data-money-convertible="" data-currency-usd="$29.00">₹290.00</span>
+                          </div>
+                        </div>
+                        <div class="ls-sale-sign-wrap" style="display: none;"></div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="ls-left-arrow limespot-recommendation-box-carousel-indicator indicator-left static-arrow ls-animate">
+                  <div class="recomm-arrow arrow-left ls-svg-arrow" style="margin-top: 145px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 -30 135.66 146.5"><path d="M0 3v14.6A2.8 2.8 0 0 0 1.4 20l36 20.8a2.8 2.8 0 0 1 0 5l-36 20.7A2.8 2.8 0 0 0 0 69v14.7A2.8 2.8 0 0 0 4.3 86l70-40.3a2.8 2.8 0 0 0 0-5L4.3.5A2.8 2.8 0 0 0 0 3z"></path></svg></div>
+                </div>
+                <div class="ls-right-arrow limespot-recommendation-box-carousel-indicator indicator-right static-arrow ls-animate">
+                  <div class="recomm-arrow arrow-right ls-svg-arrow" style="margin-top: 145px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 -30 135.66 146.5"><path d="M0 3v14.6A2.8 2.8 0 0 0 1.4 20l36 20.8a2.8 2.8 0 0 1 0 5l-36 20.7A2.8 2.8 0 0 0 0 69v14.7A2.8 2.8 0 0 0 4.3 86l70-40.3a2.8 2.8 0 0 0 0-5L4.3.5A2.8 2.8 0 0 0 0 3z"></path></svg></div>
+                </div>
+              </div></limespot-box>
+              <limespot-box data-owner="LimeSpot" data-box-type="RecentViews" data-dynamic="true" data-host-page="Cart" data-placement-order="2" data-placement-sibling="" data-placement-disposition="0" data-placement-method="" class="ls-recommendation-box limespot-recommendation-box ls-animate no-zoom" data-reference-id="" data-box-style="carousel" style="display: block;">
+              <h3 class="ls-box-title">recently viewed</h3>
+              <div class="limespot-recommendation-box-carousel-container">
+                <div class="ls-ul-container limespot-recommendation-box-carousel ls-drag-scroll v-align swiper-container2">
+                  <ul class="ls-ul limespot-recommendation-box-carousel-shelf swiper-wrapper">
+                    <li class="limespot-recommendation-box-item swiper-slide" style="margin-right: 30px; max-width: 330px; flex-basis: 330px; min-width: 330px;">
+                      <a class="ls-link" data-product-identifier="508607266871" href="./detail.html?id=1&price=28">
+                        <div class="ls-image-wrap" style="flex: 1 1 330px;"><img class="ls-image" style="max-width: 330px; max-height: 330px; border-radius: 0.1px;" alt="Jersey Crew Raglan" title="Jersey Crew Raglan" data-img-raw-src="https://cdn.shopifycdn.net/s/files/1/0049/5582/products/crew.jpg?v=1623331842" src="https://cdn.shopifycdn.net/s/files/1/0049/5582/products/crew.jpg?v=1623331842" srcset="" sizes="330px"><img src="https://cdn.shopifycdn.net/s/files/1/0049/5582/products/j-crew-1.jpg?v=1623331842" srcset="" sizes="330px" class="ls-image ls-image-secondary" style="max-width: 330px; max-height: 330px; border-radius: 0.1px;"></div>
+                        <div class="ls-info-wrap">
+                          <div class="ls-title">Jersey Crew Raglan</div>
+                          <div class="ls-vendor">mini mioche</div>
+                          <div class="ls-price-wrap">
+                            <span class="ls-original-price money" style="display: none;" data-numeric-value="32" data-money-convertible="" data-currency-usd="$32.00">₹320.00</span>
+                            <span class="ls-price money" data-numeric-value="28" data-money-convertible="" data-currency-usd="$28.00">₹280.00</span>
+                          </div>
+                        </div>
+                        <div class="ls-sale-sign-wrap" style="display: none;"></div>
+                      </a>
+                    </li><li class="limespot-recommendation-box-item swiper-slide" style="margin-right: 30px; max-width: 330px; flex-basis: 330px; min-width: 330px;">
+                      <a class="ls-link" data-product-identifier="4517265670228" href="detail.html?id=4&price=128">
+                        <div class="ls-image-wrap" style="flex: 1 1 330px;"><img class="ls-image" style="max-width: 330px; max-height: 330px; border-radius: 0.1px;" alt="Ringer Tee" title="Ringer Tee" data-img-raw-src="https://cdn.shopify.com/s/files/1/0049/5582/products/10-ringer-tee_330x330.jpg?v=1622837273" src="https://cdn.shopify.com/s/files/1/0049/5582/products/10-ringer-tee_330x330.jpg?v=1622837273" srcset="https://cdn.shopify.com/s/files/1/0049/5582/products/10-ringer-tee_180x.jpg?v=1622837273 180w,https://cdn.shopify.com/s/files/1/0049/5582/products/10-ringer-tee_360x.jpg?v=1622837273 360w,https://cdn.shopify.com/s/files/1/0049/5582/products/10-ringer-tee_470x.jpg?v=1622837273 470w,https://cdn.shopify.com/s/files/1/0049/5582/products/10-ringer-tee_600x.jpg?v=1622837273 600w,https://cdn.shopify.com/s/files/1/0049/5582/products/10-ringer-tee_750x.jpg?v=1622837273 750w,https://cdn.shopify.com/s/files/1/0049/5582/products/10-ringer-tee_940x.jpg?v=1622837273 940w,https://cdn.shopify.com/s/files/1/0049/5582/products/10-ringer-tee_1080x.jpg?v=1622837273 1080w,https://cdn.shopify.com/s/files/1/0049/5582/products/10-ringer-tee_1296x.jpg?v=1622837273 1296w,https://cdn.shopify.com/s/files/1/0049/5582/products/10-ringer-tee_1512x.jpg?v=1622837273 1512w,https://cdn.shopify.com/s/files/1/0049/5582/products/10-ringer-tee_1728x.jpg?v=1622837273 1728w,https://cdn.shopify.com/s/files/1/0049/5582/products/10-ringer-tee_2048x.jpg?v=1622837273 2048w" sizes="330px"><img src="https://cdn.shopifycdn.net/s/files/1/0049/5582/products/10_d31f68b9-6eef-408e-843e-9e9ebbe012f5.jpg?v=1622837273" srcset="" sizes="330px" class="ls-image ls-image-secondary" style="max-width: 330px; max-height: 330px; border-radius: 0.1px;"></div>
+                        <div class="ls-info-wrap">
+                          <div class="ls-title">Ringer Tee</div>
+                          <div class="ls-vendor">mini mioche</div>
+                          <div class="ls-price-wrap">
+                            <span class="ls-original-price money" style="display: none;" data-numeric-value="27" data-money-convertible="" data-currency-usd="$27.00">₹270.00</span>
+                            <span class="ls-price money" data-numeric-value="24" data-money-convertible="" data-currency-usd="$24.00">₹240.00</span>
+                          </div>
+                        </div>
+                        <div class="ls-sale-sign-wrap" style="display: none;"></div>
+                      </a>
+                    </li><li class="limespot-recommendation-box-item swiper-slide" style="margin-right: 30px; max-width: 330px; flex-basis: 330px; min-width: 330px;">
+                      <a class="ls-link" data-product-identifier="4552423374932" href="detail.html?id=5&price=118">
+                        <div class="ls-image-wrap" style="flex: 1 1 330px;"><img class="ls-image" style="max-width: 330px; max-height: 330px; border-radius: 0.1px;" alt="Kindness is Magic Ball Tee" title="Kindness is Magic Ball Tee" data-img-raw-src="https://cdn.shopify.com/s/files/1/0049/5582/products/teal-ball-tee-kindness_330x330.jpg?v=1605811302" src="https://cdn.shopify.com/s/files/1/0049/5582/products/teal-ball-tee-kindness_330x330.jpg?v=1605811302" srcset="https://cdn.shopify.com/s/files/1/0049/5582/products/teal-ball-tee-kindness_180x.jpg?v=1605811302 180w,https://cdn.shopify.com/s/files/1/0049/5582/products/teal-ball-tee-kindness_360x.jpg?v=1605811302 360w,https://cdn.shopify.com/s/files/1/0049/5582/products/teal-ball-tee-kindness_470x.jpg?v=1605811302 470w,https://cdn.shopify.com/s/files/1/0049/5582/products/teal-ball-tee-kindness_600x.jpg?v=1605811302 600w,https://cdn.shopify.com/s/files/1/0049/5582/products/teal-ball-tee-kindness_750x.jpg?v=1605811302 750w,https://cdn.shopify.com/s/files/1/0049/5582/products/teal-ball-tee-kindness_940x.jpg?v=1605811302 940w,https://cdn.shopify.com/s/files/1/0049/5582/products/teal-ball-tee-kindness_1080x.jpg?v=1605811302 1080w,https://cdn.shopify.com/s/files/1/0049/5582/products/teal-ball-tee-kindness_1296x.jpg?v=1605811302 1296w,https://cdn.shopify.com/s/files/1/0049/5582/products/teal-ball-tee-kindness_1512x.jpg?v=1605811302 1512w,https://cdn.shopify.com/s/files/1/0049/5582/products/teal-ball-tee-kindness_1728x.jpg?v=1605811302 1728w,https://cdn.shopify.com/s/files/1/0049/5582/products/teal-ball-tee-kindness_2048x.jpg?v=1605811302 2048w" sizes="330px"><img src="https://cdn.shopifycdn.net/s/files/1/0049/5582/products/kim-pdp.jpg?v=1621619130" srcset="" sizes="330px" class="ls-image ls-image-secondary" style="max-width: 330px; max-height: 330px; border-radius: 0.1px;"></div>
+                        <div class="ls-info-wrap">
+                          <div class="ls-title">Kindness is Magic Ball Tee</div>
+                          <div class="ls-vendor">mini mioche</div>
+                          <div class="ls-price-wrap">
+                            <span class="ls-original-price money" style="display: none;" data-numeric-value="27" data-money-convertible="" data-currency-usd="$27.00">₹270.00</span>
+                            <span class="ls-price money" data-numeric-value="24" data-money-convertible="" data-currency-usd="$24.00">₹240.00</span>
+                          </div>
+                        </div>
+                        <div class="ls-sale-sign-wrap" style="display: none;"></div>
+                      </a>
+                    </li><li class="limespot-recommendation-box-item swiper-slide" style="margin-right: 30px; max-width: 330px; flex-basis: 330px; min-width: 330px;">
+                      <a class="ls-link" data-product-identifier="10043484999" href="detail.html?id=6&price=38">
+                        <div class="ls-image-wrap" style="flex: 1 1 330px;"><img class="ls-image" style="max-width: 330px; max-height: 330px; border-radius: 0.1px;" alt="Fleece Biker Romper" title="Fleece Biker Romper" data-img-raw-src="https://cdn.shopify.com/s/files/1/0049/5582/products/pdp-1_e282e724-b34d-46f9-ada7-5c79328c713b_330x330.jpg?v=1617906956" src="https://cdn.shopify.com/s/files/1/0049/5582/products/pdp-1_e282e724-b34d-46f9-ada7-5c79328c713b_330x330.jpg?v=1617906956" srcset="https://cdn.shopify.com/s/files/1/0049/5582/products/pdp-1_e282e724-b34d-46f9-ada7-5c79328c713b_180x.jpg?v=1617906956 180w,https://cdn.shopify.com/s/files/1/0049/5582/products/pdp-1_e282e724-b34d-46f9-ada7-5c79328c713b_360x.jpg?v=1617906956 360w,https://cdn.shopify.com/s/files/1/0049/5582/products/pdp-1_e282e724-b34d-46f9-ada7-5c79328c713b_470x.jpg?v=1617906956 470w,https://cdn.shopify.com/s/files/1/0049/5582/products/pdp-1_e282e724-b34d-46f9-ada7-5c79328c713b_600x.jpg?v=1617906956 600w,https://cdn.shopify.com/s/files/1/0049/5582/products/pdp-1_e282e724-b34d-46f9-ada7-5c79328c713b_750x.jpg?v=1617906956 750w,https://cdn.shopify.com/s/files/1/0049/5582/products/pdp-1_e282e724-b34d-46f9-ada7-5c79328c713b_940x.jpg?v=1617906956 940w,https://cdn.shopify.com/s/files/1/0049/5582/products/pdp-1_e282e724-b34d-46f9-ada7-5c79328c713b_1080x.jpg?v=1617906956 1080w,https://cdn.shopify.com/s/files/1/0049/5582/products/pdp-1_e282e724-b34d-46f9-ada7-5c79328c713b_1296x.jpg?v=1617906956 1296w,https://cdn.shopify.com/s/files/1/0049/5582/products/pdp-1_e282e724-b34d-46f9-ada7-5c79328c713b_1512x.jpg?v=1617906956 1512w,https://cdn.shopify.com/s/files/1/0049/5582/products/pdp-1_e282e724-b34d-46f9-ada7-5c79328c713b_1728x.jpg?v=1617906956 1728w,https://cdn.shopify.com/s/files/1/0049/5582/products/pdp-1_e282e724-b34d-46f9-ada7-5c79328c713b_2048x.jpg?v=1617906956 2048w" sizes="330px"><img src="https://cdn.shopifycdn.net/s/files/1/0049/5582/products/pdp-3_53fbdae1-cc7d-4a14-b17e-39e1d3570aa8.jpg?v=1617906956" srcset="" sizes="330px" class="ls-image ls-image-secondary"></div>
+                        <div class="ls-info-wrap">
+                          <div class="ls-title">Fleece Biker Romper</div>
+                          <div class="ls-vendor">mini mioche</div>
+                          <div class="ls-price-wrap">
+                            <span class="ls-original-price money" style="display: none;" data-numeric-value="52" data-money-convertible="" data-currency-usd="$52.00">₹520.00</span>
+                            <span class="ls-price money" data-numeric-value="51" data-money-convertible="" data-currency-usd="$51.00">₹510.00</span>
+                          </div>
+                        </div>
+                        <div class="ls-sale-sign-wrap" style="display: none;"></div>
+                      </a>
+                    </li><li class="limespot-recommendation-box-item swiper-slide" style="max-width: 330px; flex-basis: 330px; min-width: 330px; margin-right: 30px;">
+                      <a class="ls-link" data-product-identifier="2499286663252" href="detail.html?id=8&price=48">
+                        <div class="ls-image-wrap" style="flex: 1 1 330px;"><img class="ls-image" style="max-width: 330px; max-height: 330px; border-radius: 0.1px;" alt="Knotted Headband" title="Knotted Headband" data-img-raw-src="https://cdn.shopify.com/s/files/1/0049/5582/products/headband_330x330.jpg?v=1617715138" src="https://cdn.shopify.com/s/files/1/0049/5582/products/headband_330x330.jpg?v=1617715138" srcset="https://cdn.shopify.com/s/files/1/0049/5582/products/headband_180x.jpg?v=1617715138 180w,https://cdn.shopify.com/s/files/1/0049/5582/products/headband_360x.jpg?v=1617715138 360w,https://cdn.shopify.com/s/files/1/0049/5582/products/headband_470x.jpg?v=1617715138 470w,https://cdn.shopify.com/s/files/1/0049/5582/products/headband_600x.jpg?v=1617715138 600w,https://cdn.shopify.com/s/files/1/0049/5582/products/headband_750x.jpg?v=1617715138 750w,https://cdn.shopify.com/s/files/1/0049/5582/products/headband_940x.jpg?v=1617715138 940w,https://cdn.shopify.com/s/files/1/0049/5582/products/headband_1080x.jpg?v=1617715138 1080w,https://cdn.shopify.com/s/files/1/0049/5582/products/headband_1296x.jpg?v=1617715138 1296w,https://cdn.shopify.com/s/files/1/0049/5582/products/headband_1512x.jpg?v=1617715138 1512w,https://cdn.shopify.com/s/files/1/0049/5582/products/headband_1728x.jpg?v=1617715138 1728w,https://cdn.shopify.com/s/files/1/0049/5582/products/headband_2048x.jpg?v=1617715138 2048w" sizes="330px"></div>
+                        <div class="ls-info-wrap">
+                          <div class="ls-title">Knotted Headband</div>
+                          <div class="ls-vendor">mini mioche</div>
+                          <div class="ls-price-wrap">
+                            <span class="ls-original-price" style="display: none;"></span>
+                            <span class="ls-price money" data-numeric-value="14" data-money-convertible="" data-currency-usd="$14.00">₹140.00</span>
+                          </div>
+                        </div>
+                        <div class="ls-sale-sign-wrap" style="display: none;"></div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="ls-left-arrow2 limespot-recommendation-box-carousel-indicator indicator-left static-arrow ls-animate">
+                  <div class="recomm-arrow arrow-left ls-svg-arrow" style="margin-top: 145px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 -30 135.66 146.5"><path d="M0 3v14.6A2.8 2.8 0 0 0 1.4 20l36 20.8a2.8 2.8 0 0 1 0 5l-36 20.7A2.8 2.8 0 0 0 0 69v14.7A2.8 2.8 0 0 0 4.3 86l70-40.3a2.8 2.8 0 0 0 0-5L4.3.5A2.8 2.8 0 0 0 0 3z"></path></svg></div>
+                </div>
+                <div class="ls-right-arrow2 limespot-recommendation-box-carousel-indicator indicator-right static-arrow ls-animate">
+                  <div class="recomm-arrow arrow-right ls-svg-arrow" style="margin-top: 145px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 -30 135.66 146.5"><path d="M0 3v14.6A2.8 2.8 0 0 0 1.4 20l36 20.8a2.8 2.8 0 0 1 0 5l-36 20.7A2.8 2.8 0 0 0 0 69v14.7A2.8 2.8 0 0 0 4.3 86l70-40.3a2.8 2.8 0 0 0 0-5L4.3.5A2.8 2.8 0 0 0 0 3z"></path></svg></div>
+                </div>
+              </div>
+              </limespot-box>
+          </limespot-container>
+        </limespot>
+      </div>
+    </main>
+    <script type="text/javascript">
+      // console.log(JSON.parse(localStorage.getItem("cartArr")), 'cartArr')
+      let cartArr = JSON.parse(localStorage.getItem("cartArr"))
+      let cartBox = document.getElementById('cartBox')
+      let totalPrice = 0
+      for(let i = 0; i < cartArr.length; i++) {
+        let id = cartArr[i].id
+        let picUrl = cartArr[i].picUrl
+        let size = cartArr[i].size
+        let color = cartArr[i].color
+        let price = Number(cartArr[i].price)
+        totalPrice += price
+        let goodsHtml = `<li class="cart-item" id="goods-${i}">
+          <figure class="cart-item-image">
+            <a class="cart-item-link" href="./detail.html?id=${id}&price=${price}">
+              <img src="${picUrl}">
+            </a>
+          </figure>
+          <div class="cart-item-content">
+            <p class="cart-item-title">
+              <a class="cart-item-link" href="./detail.html?id=${id}&price=${price}"
+              title="Slim Pant - Mustard / 3-6">Slim Pant</a>
+            </p>
+            <p class="cart-item-details">
+              <span>${color} / ${size}</span>
+            </p>
+            <div class="cart-item-quantity">
+              <span class="label">Qty x 1</span>
+            </div>
+            <p class="cart-item-price">₹${price}.00</p>
+            <button class="icon-button remove-item-button waves-effect js-remove-cart-item" onclick="removeGoods(${i})">
+              <span class="icon close-icon">Remove</span>
+            </button>
+          </div>
+        </li>`
+        cartBox.insertAdjacentHTML('afterend', goodsHtml)
+      }
+      document.getElementsByClassName('js-cart-subtotal')[0].innerText = `₹${totalPrice}.00`
+
+      // 删除商品
+      function removeGoods(index) {
+        cartArr.splice(index, 1)
+        let removeId = 'goods-' + index
+        document.getElementById(removeId).style = 'display: none;'
+        localStorage.setItem("cartArr", JSON.stringify(cartArr));
+      }
+
+      var mySwiper = new Swiper('.swiper-container',{
+        loop: true,
+        slidesPerView: 3,
+		    spaceBetween: 30,
+        prevButton:'.ls-left-arrow',
+        nextButton:'.ls-right-arrow'
+      });
+
+      var mySwiper2 = new Swiper('.swiper-container2',{
+        loop: true,
+        slidesPerView: 3,
+		    spaceBetween: 30,
+        prevButton:'.ls-left-arrow2',
+        nextButton:'.ls-right-arrow2'
+      }); 
+    </script>
+  </body>
+</html>
