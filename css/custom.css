@@ -1,0 +1,26 @@
+/*********************************************************************************
+
+	Template Name: Template Full Name Here
+	Description: A perfect template to build beautiful and unique medical websites. It comes with nice and clean design.
+	Version: 1.0
+
+	Note: This is custom css.
+
+**********************************************************************************/
+.logo a{font-size: 30px;}
+.bl_details{margin-top: 60px}
+.bradcaump-content{
+	font-size: 30px;
+}
+.thumb a{
+	display: block;
+}
+.thumb a:hover{
+	opacity: .7;
+}
+.product .thumb .content:hover a{color: #ac0404}
+.product .thumb .content{}
+.product .thumb .content{}
+.mainmenu_nav .main_menu li a:hover{
+	color: #ac0404
+}
