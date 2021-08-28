@@ -7,6 +7,7 @@
     <meta name="format-detection" content="telephone=no">
     <title>Your Shopping Cart</title>
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8;"/>
 
     <link rel="canonical" href="https://www.minimioche.com/cart">
     <link rel="shortcut icon" href="https://cdn.shopifycdn.net/s/files/1/0049/5582/t/179/assets/icon-favicon.png?v=9857541501312614760" type="image/png">
@@ -112,9 +113,6 @@
                 <input class="add-gift-wrapping" type="checkbox" value="gift-wrapping">
                 <span class="label">
                   Add gift wrapping and a note?
-                  <span class="option-price">
-                    (+$4)
-                  </span>
                 </span>
               </div>
               <div class="note-wrapper is-hidden">
@@ -449,7 +447,7 @@
             <div class="cart-item-quantity">
               <span class="label">Qty x 1</span>
             </div>
-            <p class="cart-item-price">₹${price}.00</p>
+            <p class="cart-item-price">₹00.00</p>
             <button class="icon-button remove-item-button waves-effect js-remove-cart-item" onclick="removeGoods(${i})">
               <span class="icon close-icon">Remove</span>
             </button>
@@ -457,7 +455,7 @@
         </li>`
         cartBox.insertAdjacentHTML('afterend', goodsHtml)
       }
-      document.getElementsByClassName('js-cart-subtotal')[0].innerText = `₹${totalPrice}.00`
+      document.getElementsByClassName('js-cart-subtotal')[0].innerText = `₹00.00`
 
       // 删除商品
       function removeGoods(index) {
@@ -470,7 +468,7 @@
       var mySwiper = new Swiper('.swiper-container',{
         loop: true,
         slidesPerView: 3,
-		    spaceBetween: 30,
+        spaceBetween: 30,
         prevButton:'.ls-left-arrow',
         nextButton:'.ls-right-arrow'
       });
@@ -478,7 +476,7 @@
       var mySwiper2 = new Swiper('.swiper-container2',{
         loop: true,
         slidesPerView: 3,
-		    spaceBetween: 30,
+        spaceBetween: 30,
         prevButton:'.ls-left-arrow2',
         nextButton:'.ls-right-arrow2'
       }); 
